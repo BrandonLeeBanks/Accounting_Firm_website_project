@@ -1,0 +1,322 @@
+
+/* Imported Font */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+/* Reset */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Core Styling */
+
+body
+{
+     font-family: 'Roboto', sans-serif;
+     line-height: 1.4;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+p
+{
+    margin: 0.75rem 0;
+}
+
+/* Utility Classes */
+
+.container
+{
+    max-width: 1100px;
+    margin: auto;
+    /* Aligns in the middle */
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.text-center
+{
+    text-align: center;
+}
+
+.text-primary
+{
+    color: #93cb52;
+}
+
+.bg-light
+{
+    background: #f4f4f4;
+    color: #333;
+}
+
+.bg-dark
+{
+    background: #333;
+    color: #fff;
+}
+
+.bg-primary
+{
+    background: #93cb52;
+    color: #fff;
+}
+
+.l-heading
+{
+    font-size: 4rem;
+    /* 16 x 4 */
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.m-heading
+{
+    font-size: 2rem;
+    /* 16 x 2 */
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.lead
+{
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.py-1 {padding: 1.5rem 0;}
+/* 16 x 1.5 */
+.py-2 {padding: 2rem 0;}
+/* 16 x 2 */
+.py-3 {padding: 3rem 0;}
+/* 16 x 3 */
+/* This is the utility class setting for the padding on the Y axis (Top And Bottom) */
+/* X axis is the Right and the Left */
+
+.p-1{padding: 1.5rem;}
+/* 6 x 1.5 */
+.p-2{padding: 2rem;}
+/* 6 x 2 */
+.p-3{padding: 3rem;}
+/* 6 x 3 */
+/* These Classes are for padding all around */
+
+.btn
+{
+    display: inline-block;
+    color: #fff;
+    background: #93cb52;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.list
+{
+  margin: 0.5rem 0;
+  /* 16 x 0.5 */
+  list-style: none;
+}
+
+.list li
+{
+    padding: 0.5rem 0;
+    /* 16 x 0.5 */
+    border-bottom: #444 dotted 1px;
+    /* Dotted Underlines */
+}
+
+.btn:hover
+{
+    background: #7ab436;
+}
+
+.btn-dark
+{
+    background: #333;
+    color: #fff;
+}
+
+/* Navbar */
+#navbar
+{
+    display: flex;
+    position: sticky;
+    top: 0;
+    /* This makes the navbar stick to the top */
+    background: #333;
+    color: #fff;
+    justify-content: space-between;
+    z-index: 1;
+    /* Z index puts the content on top of everything or below everything depending on the number */
+    /* 1 is right infront, and 0 is right at the back */
+    padding: 1rem;
+}
+
+#navbar ul
+{
+    display: flex;
+    /* This puts the Lis right next to each other */
+    align-items: center;
+    list-style: none;
+}
+
+#navbar ul li a
+{
+    color: #fff;
+    padding: 0.75rem;
+    /* Padding seperates the lis, so they are not so on top of each other */
+    /* 16 x 0.75 = 12 */
+    margin: 0 0.25rem;
+    /* 16 x 0.25 = 4px */
+}
+
+#navbar ul li a:hover
+{
+    background: #93cb52;
+    border-radius: 5px;
+}
+
+/* Showcase */
+#showcase
+{
+    background: #333 url('../img/showcase.jpg') no-repeat center center/cover;
+    /* As is, this only covers the content.. not the entire viewport */
+    height: 100vh;
+    /* The entire viewport is now covered */
+    color: #fff;
+}
+
+#showcase .showcase-content
+{
+    display: flex;
+    /* This will automatically put it into a row, which is not what we want */
+    flex-direction: column;
+    /* This fixes it */
+    text-align: center;
+    justify-content: center;
+    /* Horizontal */
+    align-items: center;
+    /* Vertical */
+    /* Won't work unless the container has a height */
+    height: 100%;
+    /* 100% of the showcase container */
+    padding: 0 2rem;
+    /* Pushes the content away from the sides */
+
+    /* Overlay */
+    top: 65px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* We assigned values to the top,left,right and bottom so that no matter the size of the screen, the
+       overlay will always cover the entire screen */
+
+    background: rgba(0, 0, 0,0.4);
+    /* rgba stands for red, green, blue, alpha */
+    /* Alpha meaning transparency */ 
+}
+
+
+/* Section: What We Do */
+#what .items
+{
+    display: flex;
+    /* This aligns the boxes to the center */
+    padding: 1rem;
+    /* 16 x 1 */
+}
+
+#what .items .item
+{
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    /* 16 x 1 */
+}
+
+#what .items .item i
+{
+    background: #93cb52;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    /* 16 x 1 */
+    /* Pushes the heading down */
+}
+
+
+/* Section: Who We Are */
+#who
+{
+    display: flex;
+}
+
+#who div
+{
+    flex: 1;
+    /* This tells whatever Div that is in the "Who" section to be given even spacing */
+}
+
+#who .who-img
+{
+    background: url(../img/people.jpg) no-repeat center center/cover;
+}
+
+
+/* Section: Clients */
+#clients .items
+{
+    display: flex;
+}
+
+#clients .items img
+{
+    display: block;
+    /* This allows us to add a custom width */
+    margin: auto;
+    /* Centers the content */
+    width: 60%;
+    /* 60% of it's container */
+}
+
+/* Section: Contact */
+#contact
+{
+    display: flex;
+}
+
+#contact .map,
+#contact .contact-form
+{
+    flex: 1;
+}
+
+#contact .contact-form .form-group
+{
+    margin: 0.75rem;
+    /* 16 x 0.75 */
+}
+
+#contact .contact-form label
+{
+    display: block;
+    /* The default is "Inline" */
+    /* We changed it to block so that it gets knocked onto the next line */
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea
+{
+    width: 100%;
+    /* This stretches the input and text area to 100% of it's container */
+    padding: 0.75rem;
+    /* 16 x 0.75 */
+}
+
